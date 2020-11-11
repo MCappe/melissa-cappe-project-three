@@ -41,6 +41,18 @@ h1 {
     margin: auto;
 }
 
+.options-row {
+    display: flex;
+    justify-content: center;
+}
+
+.answers {
+    width: 50px;
+    height: 50px;
+    display: flex;
+}
+
+
 
 .results-section {
     background-color: $results-background;
