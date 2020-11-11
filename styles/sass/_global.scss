@@ -1,3 +1,8 @@
+// Global Styles
+
+body {
+    font-size: 62.5%;
+}
 
 .wrapper {
     width: 1280px;
@@ -5,8 +10,10 @@
     margin: 0 auto;
 }
 
+// Header Styles
+
 header {
-    background-color: rebeccapurple;
+    background-color: $header-background;
     height: 30vh;
 }
 
@@ -14,23 +21,36 @@ h1 {
     margin: 0;
     text-align: center;
     padding: 20px;
+    font-family: $header-font;
+    font-size: 3rem;
+    color: lightgrey;
 }
 
+// Main Styles
+
 .questions-section {
-    background-color: rosybrown;
+    background-color: $secondary-background;
     padding: 20px;
     height: 50vh;
 }
 
+.question-area {
+    width: 400px;
+    height: 150px;
+    background-color: white;
+    margin: auto;
+}
+
+
 .results-section {
-    background-color: seagreen;
+    background-color: $results-background;
     padding: 20px;
 }
 
 .results {
     width: 300px;
     height: 100px;
-    background-color: white;
+    background-color: $primary-accent;
     margin: auto;
 }
 
@@ -39,15 +59,29 @@ h1 {
     display: flex;
     justify-content: center;
     margin-top: 20px;
+    margin-bottom: 20px;
+    & a {
+    padding: 10px;
+    font-size: 1rem;
+    background-color: $primary-accent;
+    text-decoration: none;
+    font-family: $main-font;
+    color: $button-font-colour;
+    }
 }
 
-.enter-game {
-    margin-bottom: 20px;
-}
+// Footer Styles
 
 footer {
-    background-color: black;
-    color: white;
+    background-color: $footer-background;
+    color: $primary-accent;
     text-align: center;
+    font-size: 1rem;
     padding: 20px;
+    font-family: $main-font;
+}
+
+footer a {
+    text-decoration: none;
+    color: $primary-accent;
 }

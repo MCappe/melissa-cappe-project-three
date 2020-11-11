@@ -235,6 +235,10 @@ html {
   overflow: hidden;
 }
 
+body {
+  font-size: 62.5%;
+}
+
 .wrapper {
   width: 1280px;
   max-width: 85%;
@@ -242,7 +246,7 @@ html {
 }
 
 header {
-  background-color: rebeccapurple;
+  background-color: #150485;
   height: 30vh;
 }
 
@@ -250,16 +254,26 @@ h1 {
   margin: 0;
   text-align: center;
   padding: 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 3rem;
+  color: lightgrey;
 }
 
 .questions-section {
-  background-color: rosybrown;
+  background-color: #590995;
   padding: 20px;
   height: 50vh;
 }
 
+.question-area {
+  width: 400px;
+  height: 150px;
+  background-color: white;
+  margin: auto;
+}
+
 .results-section {
-  background-color: seagreen;
+  background-color: #c62a88;
   padding: 20px;
 }
 
@@ -279,15 +293,29 @@ h1 {
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 20px;
-}
-
-.enter-game {
   margin-bottom: 20px;
 }
 
+.enter-game a,
+.play-again a {
+  padding: 10px;
+  font-size: 1rem;
+  background-color: white;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  color: black;
+}
+
 footer {
-  background-color: black;
+  background-color: #03c4a1;
   color: white;
   text-align: center;
+  font-size: 1rem;
   padding: 20px;
+  font-family: "Open Sans", sans-serif;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
 }

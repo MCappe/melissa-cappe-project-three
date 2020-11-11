@@ -57,7 +57,7 @@ const triviaQuestions = [
         correctAnswer: 0
     },
     {
-        question: 'What concert did Monica, Ross and Chandler attend on the show "Friends"?',
+        question: 'What concert did Monica, Ross and Chandler attend on the show Friends?',
         answers: ['Counting Crows', 'Gin Blossoms', 'Hootie and the Blowfish'],
         correctAnswer: 2
     },
@@ -88,7 +88,7 @@ const triviaQuestions = [
     },
     {
         question: 'How many bones are in the human body?',
-        answers: [206, 208. 197],
+        answers: [206, 208, 197],
         correctAnswer: 0
     },
     {
@@ -113,7 +113,7 @@ const triviaQuestions = [
     }
 ];
 
-
+console.log(triviaQuestions);
 
 
 
