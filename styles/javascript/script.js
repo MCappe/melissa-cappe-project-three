@@ -1,17 +1,9 @@
-// Wait for user to click on 'enter' (event listener)
-// Scroll to question area - question comes up
-// 3 answer options, which are clickable
-// Options in array of objects
-// Correct get's 'correct' in question placeholder (incorrect get's 'wrong in placeholder)
-// After answering 6 questions, smooth scroll to bottom section 
-// User gets results (where placeholder is)
-// Wait for user to click on 'play again'
-// Smooth scroll back to top
-
-// Hide question and results section until user clicks enter
-// results section until user finishes last question
-
-
+// wait for user to click on 'enter game' - create an event listener to bring up the first question
+// answer options will be clickable - event listener so that when the user selects and answer, they will be told if correct or incorrect (if incorrect, the correct answer will show)
+// loop through for 5 questions
+// upon completion, add an event listener to to the final question so that user will see their score on the screen
+// play again button will show up below score
+// event listener if they click play again - resets the page
 
 // Namespacing
 const triviaApp = {};
@@ -76,14 +68,30 @@ const triviaQuestions = [
 
 console.log(triviaQuestions);
 
-$('.enter-game').on('submit', function (e) {
-    e.preventDefault();
+// event listener to display question area once user clicks the submit button
+$('#enter').on('click', function () {
+    // console.log('yay')
+    
     
 });
 
-// $('.enter-game').animate({
-//     scrollTop: $('.question-area').offset().top
-// }, 1000);
+// randomly pick question from array
+// display question and all possibly answers
+
+const displayQuestion = () => {
+    // return Math.floor(Math.random()*triviaQuestions.length);
+    for (let i = 0; i < triviaQuestions.length; i++) {
+        
+    }
+    
+    
+    
+}
+
+// click function to select answer
+$('#answers').on('click', function() {
+
+})
 
 
 
