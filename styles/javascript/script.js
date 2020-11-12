@@ -8,6 +8,9 @@
 // Wait for user to click on 'play again'
 // Smooth scroll back to top
 
+// Hide question and results section until user clicks enter
+// results section until user finishes last question
+
 
 
 // Namespacing
@@ -75,6 +78,7 @@ console.log(triviaQuestions);
 
 $('.enter-game').on('submit', function (e) {
     e.preventDefault();
+    
 });
 
 // $('.enter-game').animate({

@@ -26,18 +26,28 @@ h1 {
     color: $header-text;
 }
 
+h2 {
+    margin: 0;
+    text-align: center;
+    padding: 20px;
+    font-family: $header-font;
+    font-size: 1.8rem;
+    color: $header-text;
+}
+
 // Main Styles
 
 .questions-section {
     background-color: $secondary-background;
     padding: 20px;
     height: 50vh;
+    // display: none; & display: block on entering game submit
 }
 
 .question-area {
     width: 400px;
-    height: 150px;
-    background-color: $primary-accent;
+    height: 100px;
+    border: 3px ridge $button-font-colour;
     margin: auto;
     // visibility: hidden;
 }
@@ -45,8 +55,9 @@ h1 {
 .question-class,
 .results {
     text-align: center;
-    padding-top: 20px;
+    padding-top: 35px;
     font-size: 1.2rem;
+    color: $primary-accent;
 }
 
 .options-column {
@@ -63,6 +74,11 @@ h1 {
     color: $primary-accent;
 }
 
+p {
+    background-color: $footer-background;
+    padding: 10px;
+    font-size: 1.4rem;
+}
 
 
 .results-section {
@@ -72,8 +88,8 @@ h1 {
 
 .results {
     width: 300px;
-    height: 80px;
-    background-color: $primary-accent;
+    height: 100px;
+    border: 3px ridge $button-font-colour;
     margin: auto;
 }
 
@@ -93,6 +109,11 @@ button {
     font-family: $main-font;
     color: $button-font-colour;
     margin: auto;
+    &:hover,
+    &:focus {
+        background-color: $footer-background;
+        border: 1px solid $button-font-colour;
+    }
 }
 
 // Footer Styles

@@ -259,6 +259,15 @@ h1 {
   color: lightgrey;
 }
 
+h2 {
+  margin: 0;
+  text-align: center;
+  padding: 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.8rem;
+  color: lightgrey;
+}
+
 .questions-section {
   background-color: #590995;
   padding: 20px;
@@ -267,16 +276,17 @@ h1 {
 
 .question-area {
   width: 400px;
-  height: 150px;
-  background-color: white;
+  height: 100px;
+  border: 3px ridge black;
   margin: auto;
 }
 
 .question-class,
 .results {
   text-align: center;
-  padding-top: 20px;
+  padding-top: 35px;
   font-size: 1.2rem;
+  color: white;
 }
 
 .options-column {
@@ -304,6 +314,12 @@ h1 {
   color: white;
 }
 
+p {
+  background-color: #03c4a1;
+  padding: 10px;
+  font-size: 1.4rem;
+}
+
 .results-section {
   background-color: #c62a88;
   padding: 20px;
@@ -311,8 +327,8 @@ h1 {
 
 .results {
   width: 300px;
-  height: 80px;
-  background-color: white;
+  height: 100px;
+  border: 3px ridge black;
   margin: auto;
 }
 
@@ -336,6 +352,11 @@ button {
   font-family: "Open Sans", sans-serif;
   color: black;
   margin: auto;
+}
+
+button:hover, button:focus {
+  background-color: #03c4a1;
+  border: 1px solid black;
 }
 
 footer {
