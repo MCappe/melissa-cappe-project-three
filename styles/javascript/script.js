@@ -1,7 +1,3 @@
-// Pseudo code for Project 3
-
-// Load page (hide game area on page load)
-
 // Once page loads, add an event listener that will listen for ‘submit’ on the ‘enter game’ button within the header section
 // preventDefault so that page doesn’t reload when user submits ‘enter’ button
 
@@ -23,12 +19,13 @@
 
 // Add an event listener that will fire Upon hearing ‘submit’ to play again, the page will refresh and the user will be scrolled back up to the top to play again
 
-// document ready
-$(document).ready(function() {
+// Namespacing
+const triviaApp = {};
 
-// Global variables
+// Initializer function
+triviaApp.init = () => {
 
-// Questions inside an array of objects
+}
 
 const triviaQuestions = [
     {
@@ -90,26 +87,6 @@ const triviaQuestions = [
         question: 'How many bones are in the human body?',
         answers: [206, 208, 197],
         correctAnswer: 0
-    },
-    {
-        question: 'What country invented tea?',
-        answers: ['China', 'England', 'India'],
-        correctAnswer: 0
-    },
-    {
-        question: 'What does IPA stand for?',
-        answers: ['International Porter Association', 'India Pale Ale', 'India Premium Ale'],
-        correctAnswer: 1
-    },
-    {
-        question: 'What is the original flavour of the twinkie filling?',
-        answers: ['Banana cream', 'Custard', 'Coconut cream'],
-        correctAnswer: 0
-    },
-    {
-        question: 'Which liquor is made from blue agave?',
-        answers: ['Blue curacao', 'Gin', 'Tequila'],
-        correctAnswer: 2
     }
 ];
 
@@ -118,4 +95,6 @@ console.log(triviaQuestions);
 
 
 
+$(function () {
+    triviaApp.init();
 })

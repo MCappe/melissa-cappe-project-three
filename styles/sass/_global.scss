@@ -39,6 +39,14 @@ h1 {
     height: 150px;
     background-color: white;
     margin: auto;
+    
+}
+
+.question-class,
+.results {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 1.2rem;
 }
 
 .options-row {
@@ -46,10 +54,12 @@ h1 {
     justify-content: center;
 }
 
-.answers {
-    width: 50px;
-    height: 50px;
+.question-options {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin: 10px;
 }
 
 
@@ -61,7 +71,7 @@ h1 {
 
 .results {
     width: 300px;
-    height: 100px;
+    height: 80px;
     background-color: $primary-accent;
     margin: auto;
 }
@@ -72,14 +82,16 @@ h1 {
     justify-content: center;
     margin-top: 20px;
     margin-bottom: 20px;
-    & a {
+}
+
+button {
     padding: 10px;
     font-size: 1rem;
     background-color: $primary-accent;
     text-decoration: none;
     font-family: $main-font;
     color: $button-font-colour;
-    }
+    margin: auto;
 }
 
 // Footer Styles

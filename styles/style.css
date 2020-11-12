@@ -272,6 +272,13 @@ h1 {
   margin: auto;
 }
 
+.question-class,
+.results {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 1.2rem;
+}
+
 .options-row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -281,12 +288,19 @@ h1 {
           justify-content: center;
 }
 
-.answers {
-  width: 50px;
-  height: 50px;
+.question-options {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.5rem;
+  margin: 10px;
 }
 
 .results-section {
@@ -296,7 +310,7 @@ h1 {
 
 .results {
   width: 300px;
-  height: 100px;
+  height: 80px;
   background-color: white;
   margin: auto;
 }
@@ -313,14 +327,14 @@ h1 {
   margin-bottom: 20px;
 }
 
-.enter-game a,
-.play-again a {
+button {
   padding: 10px;
   font-size: 1rem;
   background-color: white;
   text-decoration: none;
   font-family: "Open Sans", sans-serif;
   color: black;
+  margin: auto;
 }
 
 footer {
@@ -336,3 +350,7 @@ footer a {
   text-decoration: none;
   color: white;
 }
+
+/* Portrait tablet and small desktops */
+/* Landscape phone to portrait tablet */
+/* Landscape phones and down */
