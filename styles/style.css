@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -258,15 +259,23 @@ h1 {
   font-family: "Roboto", sans-serif;
   font-size: 3rem;
   color: lightgrey;
+  margin-bottom: 50px;
+}
+
+h1::before,
+h1::after {
+  content: ' ⚡︎ ';
 }
 
 h2 {
   margin: 0;
   text-align: center;
-  padding: 20px;
+  padding: 50px;
   font-family: "Roboto", sans-serif;
   font-size: 1.8rem;
   color: lightgrey;
+  border: 2px solid #c62a88;
+  margin-bottom: 20px;
 }
 
 p {
@@ -300,6 +309,15 @@ button {
 button:hover, button:focus {
   background-color: #03c4a1;
   border: 1px solid black;
+}
+
+button[data-q] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 footer {
