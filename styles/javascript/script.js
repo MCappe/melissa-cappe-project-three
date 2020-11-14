@@ -42,7 +42,7 @@ triviaApp.triviaQuestions = [
 
 triviaApp.eventListener = () => {
 
-    // hide the 'play again' button
+    // hide the 'play again' button when the page loads
     $('#replay').hide();
     // event listener hide the 'enter game' button once clicked
     $('#enter').on('click',function () {
@@ -52,29 +52,28 @@ triviaApp.eventListener = () => {
         
         $('#questions').html(`<h2>${triviaApp.triviaQuestions[0].question}</h2>`);
         $('#answers').html(`
-        <button data-q="1" data-answerVal="6">${triviaApp.triviaQuestions[0].answers[0]}</button>
-        <button data-q="1" data-answerVal="7">${triviaApp.triviaQuestions[0].answers[1]}</button>
-        <button data-q="1" data-answerVal="5">${triviaApp.triviaQuestions[0].answers[2]}</button>
+        <button data-answerVal="6" class="solution1">${triviaApp.triviaQuestions[0].answers[0]}</button>
+        <button data-answerVal="7" class="solution2">${triviaApp.triviaQuestions[0].answers[1]}</button>
+        <button data-answerVal="5" class="solution3">${triviaApp.triviaQuestions[0].answers[2]}</button>
         `);
         
-        // create an event listener that listens for user to click on an answer button, which will prompt the next question to come up on the page
         
     });
     
-        $('#answers').on('click', 'button', function () {
-            // 1) tally up the points - check user's answer
-            // 2) move to the next question in the array
-            console.log(triviaApp.questionCount)
-            if (triviaApp.questionCount == 4) {
-                console.log('results')
-                $('.results').html(`<h2>You scored ${triviaApp.score} out of 5</h2>`)
-                // $('#replay').show();
-                
-            } else {
-                const chosenAnswer = $(this).attr('data-answerVal');
-                const correct = triviaApp.triviaQuestions[triviaApp.questionCount].correctAnswer;
-                if (correct === chosenAnswer) {
+    $('#answers').on('click', 'button', function () {
+        // tally up the points - check user's answer
+        // move to the next question in the array
+        if (triviaApp.questionCount == 4) {
+            $('.results').html(`<h2>You scored ${triviaApp.score} out of 5</h2>`)
+            
+            
+        } else {
+            const chosenAnswer = $(this).attr('data-answerVal');
+            const correct = triviaApp.triviaQuestions[triviaApp.questionCount].correctAnswer;
+            // create an if else statement when user clicks on an answer button, the next question will display
+            if (correct === chosenAnswer) {
                     triviaApp.score++;
+                    // unhide the #replay button so user can play again (or refresh while still playing through)
                     $('#replay').show();
                     $('#replay').on('click', function () {
                         location.reload();
@@ -82,11 +81,13 @@ triviaApp.eventListener = () => {
                     
                 } 
                 triviaApp.questionCount++;
+                // create an event listener statement to determine if  user clicks the final answer, which will prompt a result
+                // otherwise will loop through all questions until they're complete
                 $('#questions').html(`<h2>${triviaApp.triviaQuestions[triviaApp.questionCount].question}</h2>`);
                 $('#answers').html(`
-                <button data-q="1" data-answerVal=${triviaApp.triviaQuestions[triviaApp.questionCount].correctAnswer}>${triviaApp.triviaQuestions[triviaApp.questionCount].answers[0]}</button>
-                <button data-q="1" data-answerVal=${triviaApp.triviaQuestions[triviaApp.questionCount].correctAnswer}>${triviaApp.triviaQuestions[triviaApp.questionCount].answers[1]}</button>
-                <button data-q="1" data-answerVal=${triviaApp.triviaQuestions[triviaApp.questionCount].correctAnswer}>${triviaApp.triviaQuestions[triviaApp.questionCount].answers[2]}</button>
+                <button data-answerVal=${triviaApp.triviaQuestions[triviaApp.questionCount].correctAnswer} class="solution1">${triviaApp.triviaQuestions[triviaApp.questionCount].answers[0]}</button>
+                <button data-answerVal=${triviaApp.triviaQuestions[triviaApp.questionCount].correctAnswer} class="solution2">${triviaApp.triviaQuestions[triviaApp.questionCount].answers[1]}</button>
+                <button data-answerVal=${triviaApp.triviaQuestions[triviaApp.questionCount].correctAnswer} class="solution3">${triviaApp.triviaQuestions[triviaApp.questionCount].answers[2]}</button>
             `);
 
             }
@@ -95,8 +96,6 @@ triviaApp.eventListener = () => {
         
 }
 
-// create an event listener to listen for when the user clicks the final answer, which will prompt a results <h2>
-// unhide the #replay button
 
 $(function () {
     triviaApp.init();
