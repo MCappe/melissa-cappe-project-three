@@ -61,7 +61,7 @@ triviaApp.eventListener = () => {
     });
     
     $('#answers').on('click', 'button', function () {
-        // tally up the points - check user's answer
+        // tally up the points - check user's answer (I can't seem to get the answers to tally properly. No matter what I put in, the max tally is always 2)**
         // move to the next question in the array
         if (triviaApp.questionCount == 4) {
             $('.results').html(`<h2>You scored ${triviaApp.score} out of 5</h2>`)
