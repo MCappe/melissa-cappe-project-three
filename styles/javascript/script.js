@@ -1,3 +1,9 @@
+// MVP
+// Have one question appear on the page at at time;
+// Randomly select which subject is given(using math.random);
+    // didn't end up using math.random - I changed my mind to have the 5 questions loop through one by one
+// Option to play again once finished.
+
 // Namespacing
 const triviaApp = {};
 
@@ -62,11 +68,11 @@ triviaApp.eventListener = () => {
     
     $('#answers').on('click', 'button', function () {
         // tally up the points - check user's answer (I can't seem to get the answers to tally properly. No matter what I put in, the max tally is always 2)**
-        // move to the next question in the array
         if (triviaApp.questionCount == 4) {
             $('.results').html(`<h2>You scored ${triviaApp.score} out of 5</h2>`)
             
             
+            // move to the next question in the array if all questions have been answered
         } else {
             const chosenAnswer = $(this).attr('data-answerVal');
             const correct = triviaApp.triviaQuestions[triviaApp.questionCount].correctAnswer;
@@ -102,3 +108,10 @@ $(function () {
 })
 
 
+// Stretch goals
+// Timer for each question (10 seconds);
+// Smooth scrolling to next section / question when previous answer is logged (as opposed to having them appear in the same section one at a time)
+    // Convert to a trivial pursuit-styled game: //
+// A floating "pie" that follows the user down the page, indicating how many pieces they've collected;
+// Give user a choice as to which subject they would like to start with (have multiple subjects of questions);
+// Animation celebrating completion.
